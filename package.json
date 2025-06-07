@@ -1,27 +1,49 @@
 {
-  "name": "delldolly-webpage",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "export": "next export",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.29"
-  },
-  "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.29"
-  }
+	"name": "delldolly-webpage",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"export": "next export",
+		"start": "next start",
+		"lint": "next lint",
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d out",
+		"eslint": "eslint . --ext .js,.jsx,.tsx,.ts",
+		"eslint:fix": "eslint --fix .",
+		"prettier:fix": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
+	},
+	"dependencies": {
+		"@types/node": "^20",
+		"@types/react": "^18",
+		"@types/react-dom": "^18",
+		"@typescript-eslint/eslint-plugin": "^5.31.0",
+		"@typescript-eslint/parser": "^5.31.0",
+		"eslint": "^8",
+		"eslint-config-next": "14.2.29",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-jsx-a11y": "^6.6.1",
+		"eslint-plugin-prettier": "^4.2.1",
+		"eslint-plugin-react": "^7.30.1",
+		"eslint-plugin-react-hooks": "^4.6.0",
+		"next": "14.2.29",
+		"react": "^18",
+		"react-dom": "^18",
+		"styled-components": "^5.3.5"
+	},
+	"devDependencies": {
+		"@types/node": "^20",
+		"@types/react": "^18",
+		"@types/react-dom": "^18",
+		"@types/styled-components": "^5.1.25",
+		"@typescript-eslint/eslint-plugin": "^5.48.0",
+		"eslint": "^8.20.0",
+		"eslint-config-next": "12.2.3",
+		"gh-pages": "^6.3.0",
+		"postcss": "^8",
+		"prettier": "3.5.3",
+		"tailwindcss": "^3.4.1",
+		"typescript": "^5"
+	}
 }
